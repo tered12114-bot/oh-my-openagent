@@ -9,9 +9,9 @@ description: Developer reference for the Prometheus strategic planner agent prom
 
 ## OVERVIEW
 
-3 TypeScript files plus 3 markdown prompt variants in [`packages/prompts-core/prompts/prometheus/`](../../../packages/prompts-core/prompts/prometheus). Prometheus remains the interview-mode strategic planner, but this directory is now a thin adapter layer. Prompt content lives in `packages/prompts-core`; `src/agents/prometheus/` routes model variants and applies runtime tool gating.
+3 TypeScript files plus 3 markdown prompt variants in [`packages/prompts-core/prompts/prometheus/`](../../../../prompts-core/prompts/prometheus). Prometheus remains the interview-mode strategic planner, but this directory is now a thin adapter layer. Prompt content lives in `packages/prompts-core`; `src/agents/prometheus/` routes model variants and applies runtime tool gating.
 
-This shape follows the package layering refactor in [`ROADMAP.md`](../../../ROADMAP.md): prompts are harness-neutral core assets, while the OpenCode adapter keeps only model routing and runtime integration.
+This shape follows the package layering refactor in [`ROADMAP.md`](../../../../../ROADMAP.md): prompts are harness-neutral core assets, while the OpenCode adapter keeps only model routing and runtime integration.
 
 ## FILES
 
@@ -48,7 +48,7 @@ This filtering is runtime adapter behavior. Do not duplicate stripped markdown v
 - Must explore codebase before planning (NEVER plan blind)
 - Plans saved to `.omo/plans/`
 - Acceptance criteria requiring "user manually tests" are FORBIDDEN
-- Prompt edits belong in [`packages/prompts-core/prompts/prometheus/`](../../../packages/prompts-core/prompts/prometheus), not in TypeScript section files
+- Prompt edits belong in [`packages/prompts-core/prompts/prometheus/`](../../../../prompts-core/prompts/prometheus), not in TypeScript section files
 
 ## PLAN OUTPUT FORMAT
 

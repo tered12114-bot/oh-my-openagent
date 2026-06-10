@@ -6,7 +6,7 @@
 
 Spawns coordinated agent teams with shared mailbox, task list, optional tmux layout, and graceful lifecycle. Modeled after Claude Code Agent Teams. **OFF by default.** Enable via `team_mode.enabled` in `oh-my-opencode.jsonc`; restart OpenCode after enabling.
 
-User docs: [`docs/guide/team-mode.md`](../../../docs/guide/team-mode.md).
+User docs: [`docs/guide/team-mode.md`](../../../../../docs/guide/team-mode.md).
 
 ## CONFIG
 

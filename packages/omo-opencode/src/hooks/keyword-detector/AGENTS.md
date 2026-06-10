@@ -4,9 +4,9 @@
 
 ## OVERVIEW
 
-Transform Tier hook on `messages.transform`. Scans the first user message for mode keywords and injects mode-specific system prompts. The detector and routing logic stay in `src/hooks/keyword-detector/`; prompt bodies now live in [`packages/prompts-core/prompts/`](../../../packages/prompts-core/prompts) so they can be shared by future harness adapters.
+Transform Tier hook on `messages.transform`. Scans the first user message for mode keywords and injects mode-specific system prompts. The detector and routing logic stay in `src/hooks/keyword-detector/`; prompt bodies now live in [`packages/prompts-core/prompts/`](../../../../prompts-core/prompts) so they can be shared by future harness adapters.
 
-This matches the package layering direction in [`ROADMAP.md`](../../../ROADMAP.md): `packages/prompts-core` owns static prompt content, while this OpenCode hook owns keyword detection, model routing, and message injection.
+This matches the package layering direction in [`ROADMAP.md`](../../../../../ROADMAP.md): `packages/prompts-core` owns static prompt content, while this OpenCode hook owns keyword detection, model routing, and message injection.
 
 ## KEYWORDS
 
@@ -53,14 +53,14 @@ keyword-detector/
 
 | Prompt family | Markdown source |
 |---------------|-----------------|
-| Ultrawork default | [`packages/prompts-core/prompts/ultrawork/default.md`](../../../packages/prompts-core/prompts/ultrawork/default.md) |
-| Ultrawork GPT | [`packages/prompts-core/prompts/ultrawork/gpt.md`](../../../packages/prompts-core/prompts/ultrawork/gpt.md) |
-| Ultrawork Gemini | [`packages/prompts-core/prompts/ultrawork/gemini.md`](../../../packages/prompts-core/prompts/ultrawork/gemini.md) |
-| Ultrawork planner | [`packages/prompts-core/prompts/ultrawork/planner.md`](../../../packages/prompts-core/prompts/ultrawork/planner.md) |
-| Search mode | [`packages/prompts-core/prompts/mode/search.md`](../../../packages/prompts-core/prompts/mode/search.md) |
-| Analyze mode | [`packages/prompts-core/prompts/mode/analyze.md`](../../../packages/prompts-core/prompts/mode/analyze.md) |
-| Team mode | [`packages/prompts-core/prompts/mode/team.md`](../../../packages/prompts-core/prompts/mode/team.md) |
-| Hyperplan mode | [`packages/prompts-core/prompts/mode/hyperplan.md`](../../../packages/prompts-core/prompts/mode/hyperplan.md) |
+| Ultrawork default | [`packages/prompts-core/prompts/ultrawork/default.md`](../../../../prompts-core/prompts/ultrawork/default.md) |
+| Ultrawork GPT | [`packages/prompts-core/prompts/ultrawork/gpt.md`](../../../../prompts-core/prompts/ultrawork/gpt.md) |
+| Ultrawork Gemini | [`packages/prompts-core/prompts/ultrawork/gemini.md`](../../../../prompts-core/prompts/ultrawork/gemini.md) |
+| Ultrawork planner | [`packages/prompts-core/prompts/ultrawork/planner.md`](../../../../prompts-core/prompts/ultrawork/planner.md) |
+| Search mode | [`packages/prompts-core/prompts/mode/search.md`](../../../../prompts-core/prompts/mode/search.md) |
+| Analyze mode | [`packages/prompts-core/prompts/mode/analyze.md`](../../../../prompts-core/prompts/mode/analyze.md) |
+| Team mode | [`packages/prompts-core/prompts/mode/team.md`](../../../../prompts-core/prompts/mode/team.md) |
+| Hyperplan mode | [`packages/prompts-core/prompts/mode/hyperplan.md`](../../../../prompts-core/prompts/mode/hyperplan.md) |
 
 The `src/hooks/keyword-detector/{search,analyze,team,hyperplan}/default.ts` files keep the regex triggers in the hook layer and import the markdown-backed constants from `@oh-my-opencode/prompts-core`. The ultrawork files import markdown with Bun's `.md` text loader so the exact prompt bytes are bundled into `dist/index.js`.
 

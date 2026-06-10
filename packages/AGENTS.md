@@ -29,7 +29,7 @@ Each contains only a `bin/<binary>` and a `package.json`. Built by [`script/buil
 
 | Package | Layout | Purpose |
 |---------|--------|---------|
-| `lsp-tools-mcp/` | Vendored standalone project (`.github/`, `CHANGELOG.md`, `LICENSE`, `src/`, `test/`, `biome.json`, `vitest.config.ts`) | Serves `lsp_diagnostics`, `lsp_goto_definition`, `lsp_find_references`, `lsp_symbols`, `lsp_prepare_rename`, `lsp_rename`, `lsp_status` tools via stdio MCP. Registered as tier-1 MCP `lsp` in [`src/mcp/`](../src/mcp). |
+| `lsp-tools-mcp/` | Vendored standalone project (`.github/`, `CHANGELOG.md`, `LICENSE`, `src/`, `test/`, `biome.json`, `vitest.config.ts`) | Serves `lsp_diagnostics`, `lsp_goto_definition`, `lsp_find_references`, `lsp_symbols`, `lsp_prepare_rename`, `lsp_rename`, `lsp_status` tools via stdio MCP. Registered as tier-1 MCP `lsp` in [`src/mcp/`](omo-opencode/src/mcp). |
 | `ast-grep-mcp/` | Internal package (`src/`, `dist/`, `tsconfig.json`) | Serves `ast_grep_search` + `ast_grep_replace` tools via stdio MCP. Registered as tier-1 MCP `ast_grep`. |
 | `git-bash-mcp/` | Internal package (`src/`, `dist/`, `tsconfig.json`) | stdio MCP serving the Windows-only `git_bash` tool for the Codex edition. Tier-1 MCP. |
 
